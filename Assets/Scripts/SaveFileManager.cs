@@ -3,11 +3,12 @@ using System.IO;
 
 public class SaveFileManager : MonoBehaviour
 {
+    private string path;
     void Start()
     {
 
         //1
-        string path = Path.Combine(Application.persistentDataPath, "SaveData");
+        path = Path.Combine(Application.persistentDataPath, "SaveData");
         Directory.CreateDirectory(path);
 
         string textPath1 = Path.Combine(path, "save1.txt");
@@ -24,7 +25,7 @@ public class SaveFileManager : MonoBehaviour
 
         //2
         string[] files = Directory.GetFiles(path);
-        foreach(string file in files)
+        foreach (string file in files)
         {
             Debug.Log($"파일: {Path.GetFileName(file)}");
         }
@@ -43,5 +44,25 @@ public class SaveFileManager : MonoBehaviour
             Debug.Log($"파일: {Path.GetFileName(file)}");
         }
         Debug.Log(Application.persistentDataPath);
+        //}
+        //public void OnClikPrintButton()
+        //{
+        //    string[] files = Directory.GetFiles(path);
+        //    foreach (string file in files)
+        //    {
+        //        Debug.Log($"파일: {Path.GetFileName(file)}");
+        //    }
+        //}
+
+        //public void OnClikCopyButton()
+        //{
+        //    string copytextPath = Path.Combine(path, "save1_backup.txt");
+        //    File.Copy(textPath1, copytextPath, true);
+        //}
+
+        //public void OnClikDeleteButton()
+        //{
+        //    File.Delete(textPath3);
+        //}
     }
 }
