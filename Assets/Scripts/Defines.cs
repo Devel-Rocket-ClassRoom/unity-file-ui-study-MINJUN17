@@ -9,7 +9,12 @@ public enum Languages
 
 public static class Variables
 {
-    public static event System.Action OnLanguageChanged;  
+    public static event System.Action OnLanguageChanged;
+    public static event System.Action<Languages> OnAllLanguageChanged;
+    public static void OnChangedAllLanguage(Languages lang)
+    {
+        OnAllLanguageChanged?.Invoke(lang);
+    }
     private static Languages language = Languages.Korean;
     public static Languages Languages
     {

@@ -10,6 +10,9 @@ public class Localization : MonoBehaviour
 
     private void OnEnable()
     {
+#if UNITY_EDITOR
+        Variables.OnAllLanguageChanged += OnChangedLanguage;
+#endif
         Variables.OnLanguageChanged += OnChangedId;
         if (Application.isPlaying)
         {
@@ -32,6 +35,9 @@ public class Localization : MonoBehaviour
     private void OnDisable()
     {
         Variables.OnLanguageChanged -= OnChangedId;
+#if UNITY_EDITOR
+        Variables.OnAllLanguageChanged -= OnChangedLanguage;
+#endif
     }
 
     private void Update()
@@ -65,6 +71,20 @@ public class Localization : MonoBehaviour
     {
         var stringTable = DataTableManager.GetStringTable(lang);
         text.text = stringTable.Get(id);
+    }
+#endif
+#if UNITY_EDITOR
+    public void OnChangedAllLanguage(Languages lang)
+    {
+        editorLanguage = lang;
+        var stringTable = DataTableManager.GetStringTable(lang);
+        text.text = stringTable.Get(id);
+    }
+
+    [ContextMenu("Change All Language")]
+    private void ApplyLanguageToAll()
+    {
+        Variables.OnChangedAllLanguage(editorLanguage);
     }
 #endif
 }
