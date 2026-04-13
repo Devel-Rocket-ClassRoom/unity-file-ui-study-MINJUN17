@@ -12,11 +12,12 @@ public class KeyValueSetting : MonoBehaviour
         Dictionary<string, string> settings = new Dictionary<string, string>();
         using (StreamReader reader = new StreamReader(path))
         {
-            string line;
-            while ((line = reader.ReadLine()) != null)
+            string line = reader.ReadLine();
+            while (line  != null)
             {
                 string[] parts = line.Split('=');
                 settings[parts[0]] = parts[1];
+                line = reader.ReadLine();
             }
         }
         Debug.Log($"설정 로드 완료 (항목 {settings.Count}개)");
@@ -35,11 +36,9 @@ public class KeyValueSetting : MonoBehaviour
                 writer.WriteLine($"{pair.Key}={pair.Value}");
             }
         }
-
         Debug.Log("--- 변경 후 저장 ---");
         Debug.Log($"bgm_volume = {settings["bgm_volume"]}");
         Debug.Log($"language = {settings["language"]}");
-
         Debug.Log("--- 최종 파일 내용 ---");
         Debug.Log(File.ReadAllText(path));
     }
