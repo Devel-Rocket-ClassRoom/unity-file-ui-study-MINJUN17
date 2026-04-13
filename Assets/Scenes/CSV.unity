@@ -666,7 +666,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: hi
+  m_text: "\uC548\uB155"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 876f88d3aa8b5b844a799e077d9c705a, type: 2}
   m_sharedMaterial: {fileID: -4796263515622627045, guid: 876f88d3aa8b5b844a799e077d9c705a, type: 2}
@@ -758,7 +758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 883f4d62b05676c4c833864b9e6930d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Localization
-  editorLanguage: 1
+  editorLanguage: 0
   id: HELLO
   text: {fileID: 540111849}
 --- !u!1 &739496904
