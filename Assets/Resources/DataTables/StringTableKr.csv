@@ -5,8 +5,8 @@ BYE,잘가
 YOU DIE,너 죽음
 Item1Name,검
 Item2Name,방패
-Item3Name,활 
-Item4Name,물약 
+Item3Name,활
+Item4Name,물약
 Item1Desc,이것은 검이다.
 Item2Desc,이것은 방패다.
 Item3Desc,이것은 활이다.
@@ -19,5 +19,4 @@ Character1Desc,나는 전사
 Character2Desc,나는 마법사
 Character3Desc,나는 궁수
 Character4Desc,나는 도적
-Attack,공격력
-
+Stat,공격력: {0}\n방어력: {1}

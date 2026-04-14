@@ -7,7 +7,7 @@ public class ItemTableTest1 : MonoBehaviour
     public string itemId;
 
     public Image icon;
-    public Localization textName;
+    public LocalizationText textName;
 
     public ItemTableTest2 itemInfo;
     private void OnEnable()

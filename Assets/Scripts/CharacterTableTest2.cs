@@ -1,25 +1,36 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CharacterTableTest2 : MonoBehaviour
 {
     public Image icon;
-    public Localization textName;
-    public Localization textDesc;
-    public Localization textAttack;
+    public LocalizationText textName;
+    public TextMeshProUGUI textDesc;
+
+    private CharacterData currentData;
+
     private void OnEnable()
     {
         SetEmpty();
+        Variables.OnLanguageChanged += LanguageChange;
     }
+
     public void SetEmpty()
     {
         icon.sprite = null;
         textName.id = string.Empty;
-        textDesc.id = string.Empty;
+        textDesc.text = string.Empty;
         textName.OnChangedId();
-        textDesc.OnChangedId();
     }
+    private void LanguageChange()
+    {
+        if (currentData != null)
+        {
+            textDesc.text = currentData.ToLocalizedString();
+        }
+    }
+
     public void SetItemData(string itemId)
     {
         CharacterData data = DataTableManager.CharacterTable.Get(itemId);
@@ -28,13 +39,10 @@ public class CharacterTableTest2 : MonoBehaviour
 
     public void SetItemData(CharacterData data)
     {
+        currentData = data;
         icon.sprite = data.SpriteIcon;
         textName.id = data.Name;
-        textDesc.id = data.Desc;
-        textAttack.id = data.Attack.ToString();
+        textDesc.text = data.ToLocalizedString();
         textName.OnChangedId();
-        textDesc.OnChangedId();
-        textAttack.OnChangedId();
-
     }
 }

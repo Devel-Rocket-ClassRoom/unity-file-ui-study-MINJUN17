@@ -6,7 +6,7 @@ public class CharacterTableTest1 : MonoBehaviour
     public string characterId;
 
     public Image icon;
-    public Localization textName;
+    public LocalizationText textName;
 
     public CharacterTableTest2 characterInfo;
     private void OnEnable()

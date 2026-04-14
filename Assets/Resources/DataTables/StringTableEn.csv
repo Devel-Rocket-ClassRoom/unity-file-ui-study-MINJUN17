@@ -11,12 +11,12 @@ Item1Desc,This is a sword.
 Item2Desc,This is a shield.
 Item3Desc,This is a bow.
 Item4Desc,This is a potion.
-Character1Name,Worrior
+Character1Name,Warrior
 Character2Name,Mage
 Character3Name,Archer
 Character4Name,Rogue
-Character1Desc,imWorrior
-Character2Desc,imMage
-Character3Desc,imArcher
-Character4Desc,imRogue
-Attack,Attack
+Character1Desc,I am a Warrior
+Character2Desc,I am a Mage
+Character3Desc,I am an Archer
+Character4Desc,I am a Rogue
+Stat,Attack: {0}\nDefense: {1}

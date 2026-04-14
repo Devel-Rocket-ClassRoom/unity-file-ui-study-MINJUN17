@@ -11,6 +11,7 @@ public class CharacterData
     public string Name { get; set; }
     public string Desc { get; set; }
     public int Attack { get; set; }
+    public int Defense {  get; set; }
     public string Icon { get; set; }
     public string StringName => DataTableManager.StringTable.Get(Name);
     public string StringDesc => DataTableManager.StringTable.Get(Desc);
@@ -18,6 +19,11 @@ public class CharacterData
     public override string ToString()
     {
         return $"{Id} /  {Name} / {Desc} / {Attack} / {Icon}";
+    }
+    public string ToLocalizedString()
+    {
+        string formatString = DataTableManager.StringTable.Get("Stat");
+        return string.Format(formatString, Attack, Defense);
     }
 }
 public class CharacterTable : DataTable

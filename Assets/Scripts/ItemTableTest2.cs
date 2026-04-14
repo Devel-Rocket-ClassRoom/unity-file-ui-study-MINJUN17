@@ -5,8 +5,8 @@ using static UnityEditor.Progress;
 public class ItemTableTest2 : MonoBehaviour
 {
     public Image icon;
-    public Localization textName;
-    public Localization textDesc;
+    public LocalizationText textName;
+    public LocalizationText textDesc;
     private void OnEnable()
     {
         SetEmpty();
