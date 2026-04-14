@@ -11,7 +11,7 @@ public class Localization : MonoBehaviour
     private void OnEnable()
     {
 #if UNITY_EDITOR
-        Variables.OnAllLanguageChanged += OnChangedLanguage;
+        Variables.OnAllLanguageChanged += OnChangedAllLanguage;
 #endif
         Variables.OnLanguageChanged += OnChangedId;
         if (Application.isPlaying)
@@ -36,7 +36,7 @@ public class Localization : MonoBehaviour
     {
         Variables.OnLanguageChanged -= OnChangedId;
 #if UNITY_EDITOR
-        Variables.OnAllLanguageChanged -= OnChangedLanguage;
+        Variables.OnAllLanguageChanged -= OnChangedAllLanguage;
 #endif
     }
 
