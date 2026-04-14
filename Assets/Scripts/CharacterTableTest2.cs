@@ -15,6 +15,10 @@ public class CharacterTableTest2 : MonoBehaviour
         SetEmpty();
         Variables.OnLanguageChanged += LanguageChange;
     }
+    private void OnDisable()
+    {
+        Variables.OnLanguageChanged -= LanguageChange;
+    }
 
     public void SetEmpty()
     {
@@ -27,7 +31,7 @@ public class CharacterTableTest2 : MonoBehaviour
     {
         if (currentData != null)
         {
-            textDesc.text = currentData.ToLocalizedString();
+            textDesc.text = currentData.GetStatText();
         }
     }
 
@@ -42,7 +46,7 @@ public class CharacterTableTest2 : MonoBehaviour
         currentData = data;
         icon.sprite = data.SpriteIcon;
         textName.id = data.Name;
-        textDesc.text = data.ToLocalizedString();
+        textDesc.text = data.GetStatText();
         textName.OnChangedId();
     }
 }

@@ -20,7 +20,7 @@ public class CharacterData
     {
         return $"{Id} /  {Name} / {Desc} / {Attack} / {Icon}";
     }
-    public string ToLocalizedString()
+    public string GetStatText()
     {
         string formatString = DataTableManager.StringTable.Get("Stat");
         return string.Format(formatString, Attack, Defense);

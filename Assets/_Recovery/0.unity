@@ -394,6 +394,7 @@ GameObject:
   - component: {fileID: 142030089}
   - component: {fileID: 142030092}
   - component: {fileID: 142030091}
+  - component: {fileID: 142030090}
   - component: {fileID: 142030094}
   - component: {fileID: 142030093}
   m_Layer: 5
@@ -422,6 +423,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -63}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &142030090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142030088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 883f4d62b05676c4c833864b9e6930d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Localization
+  editorLanguage: 0
+  id: YOU DIE
+  text: {fileID: 142030091}
 --- !u!114 &142030091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,6 +550,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 883f4d62b05676c4c833864b9e6930d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Localization
+  editorLanguage: 0
+  id: YOU DIE
+  text: {fileID: 142030091}
 --- !u!114 &142030094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,6 +579,7 @@ GameObject:
   - component: {fileID: 145539010}
   - component: {fileID: 145539013}
   - component: {fileID: 145539012}
+  - component: {fileID: 145539011}
   - component: {fileID: 145539014}
   m_Layer: 5
   m_Name: Text (TMP)
@@ -587,6 +607,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &145539011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145539009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 883f4d62b05676c4c833864b9e6930d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Localization
+  editorLanguage: 0
+  id: Character3Name
+  text: {fileID: 145539012}
 --- !u!114 &145539012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -928,6 +963,7 @@ GameObject:
   - component: {fileID: 405145291}
   - component: {fileID: 405145290}
   - component: {fileID: 405145289}
+  - component: {fileID: 405145288}
   - component: {fileID: 405145292}
   m_Layer: 5
   m_Name: Name
@@ -936,6 +972,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &405145288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405145287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 883f4d62b05676c4c833864b9e6930d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Localization
+  editorLanguage: 0
+  id: YOU DIE
+  text: {fileID: 405145289}
 --- !u!114 &405145289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1671,6 +1722,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 883f4d62b05676c4c833864b9e6930d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Localization
+  editorLanguage: 2
+  id: HELLO
+  text: {fileID: 540111849}
 --- !u!1 &566568716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1833,6 +1887,8 @@ GameObject:
   - component: {fileID: 571544724}
   - component: {fileID: 571544723}
   - component: {fileID: 571544722}
+  - component: {fileID: 571544721}
+  - component: {fileID: 571544725}
   m_Layer: 5
   m_Name: Desc
   m_TagString: Untagged
@@ -1840,6 +1896,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &571544721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571544720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 883f4d62b05676c4c833864b9e6930d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Localization
+  editorLanguage: 0
+  id: YOU DIE
+  text: {fileID: 571544722}
 --- !u!114 &571544722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1959,6 +2030,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &571544725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571544720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cbf879c8e692214fbba0d525d46242c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizationText
+  editorLanguage: 0
+  id: 
+  text: {fileID: 571544722}
 --- !u!1 &679329768
 GameObject:
   m_ObjectHideFlags: 0
@@ -2353,6 +2439,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 883f4d62b05676c4c833864b9e6930d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Localization
+  editorLanguage: 0
+  id: HELLO
+  text: {fileID: 800980389}
 --- !u!1 &902949774
 GameObject:
   m_ObjectHideFlags: 0
@@ -3503,6 +3592,7 @@ GameObject:
   - component: {fileID: 1913370800}
   - component: {fileID: 1913370803}
   - component: {fileID: 1913370802}
+  - component: {fileID: 1913370801}
   - component: {fileID: 1913370804}
   m_Layer: 5
   m_Name: Text (TMP)
@@ -3530,6 +3620,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1913370801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913370799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 883f4d62b05676c4c833864b9e6930d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Localization
+  editorLanguage: 0
+  id: Character2Name
+  text: {fileID: 1913370802}
 --- !u!114 &1913370802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3656,6 +3761,7 @@ GameObject:
   - component: {fileID: 1916055868}
   - component: {fileID: 1916055871}
   - component: {fileID: 1916055870}
+  - component: {fileID: 1916055869}
   - component: {fileID: 1916055872}
   m_Layer: 5
   m_Name: Text (TMP)
@@ -3683,6 +3789,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1916055869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916055867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 883f4d62b05676c4c833864b9e6930d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Localization
+  editorLanguage: 0
+  id: Character4Name
+  text: {fileID: 1916055870}
 --- !u!114 &1916055870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3809,6 +3930,7 @@ GameObject:
   - component: {fileID: 1944568886}
   - component: {fileID: 1944568889}
   - component: {fileID: 1944568888}
+  - component: {fileID: 1944568887}
   - component: {fileID: 1944568890}
   m_Layer: 5
   m_Name: Text (TMP)
@@ -3836,6 +3958,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1944568887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944568885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 883f4d62b05676c4c833864b9e6930d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Localization
+  editorLanguage: 0
+  id: Character1Name
+  text: {fileID: 1944568888}
 --- !u!114 &1944568888
 MonoBehaviour:
   m_ObjectHideFlags: 0
