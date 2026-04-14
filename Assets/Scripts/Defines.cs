@@ -6,6 +6,12 @@ public enum Languages
     English,
     Japanese,
 }
+public enum ItemType
+{
+    Weapon,
+    Equip,
+    Consumable,
+}
 
 public static class Variables
 {
@@ -41,4 +47,5 @@ public static class DataTableIds
         "StringTableJp"
     };
     public static string String => StringTableIds[(int)Variables.Languages];
+    public static readonly string Item = "ItemTable";
 }
