@@ -48,4 +48,5 @@ public static class DataTableIds
     };
     public static string String => StringTableIds[(int)Variables.Languages];
     public static readonly string Item = "ItemTable";
+    public static readonly string Character = "CharacterTable";
 }

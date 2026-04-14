@@ -32,16 +32,4 @@ public class ItemTableTest1 : MonoBehaviour
     {
         itemInfo.SetItemData(itemId);
     }
-    
-    //private void Start()
-    //{
-    //    itemData = DataTableManager.ItemTable.Get(itemId);
-    //    textName.id = itemData.Name;
-    //    icon.sprite = itemData.SpriteIcon;
-    //    textName.OnChangedId();
-    //}
-    //public void OnClick()
-    //{
-    //    detail.Show(itemId);
-    //}
 }

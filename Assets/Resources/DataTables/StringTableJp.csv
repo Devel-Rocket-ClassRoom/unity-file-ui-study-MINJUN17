@@ -1,13 +1,22 @@
-﻿Id,String
-,
-HELLO,やあ
-BYE,じゃあな
-YOU DIE,あなたは死ぬ
-Item1Name,剣
-Item2Name,盾
-Item3Name,弓
-Item4Name,ポーション
-Item1Desc,これは剣だ。
-Item2Desc,これは盾だ。
-Item3Desc,これは弓だ。
-Item4Desc,これはポーションだ。
+﻿Id	String
+	
+HELLO	やあ
+BYE	じゃあな
+YOU DIE	あなたは死ぬ
+Item1Name	?
+Item2Name	盾
+Item3Name	弓
+Item4Name	ポ?ション
+Item1Desc	これは?だ。
+Item2Desc	これは盾だ。
+Item3Desc	これは弓だ。
+Item4Desc	これはポ?ションだ。
+Character1Name	워리어
+Character2Name	메이지
+Character3Name	아쳐
+Character4Name	로그
+Character1Desc	와타시와워리어
+Character2Desc	와타시와메이지
+Character3Desc	와타시와아쳐
+Character4Desc	와타시와로그
+Attack	アタック

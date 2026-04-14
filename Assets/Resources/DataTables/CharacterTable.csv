@@ -1,0 +1,5 @@
+﻿Id,Name,Desc,Attack,Icon
+Character1,Character1Name,Character1Desc,10,Icon_Warrior
+Character2,Character2Name,Character2Desc,20,Icon_Mage
+Character3,Character3Name,Character3Desc,30,Icon_Archer
+Character4,Character4Name,Character4Desc,40,Icon_Rogue

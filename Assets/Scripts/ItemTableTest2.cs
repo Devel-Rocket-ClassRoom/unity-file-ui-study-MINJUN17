@@ -34,11 +34,4 @@ public class ItemTableTest2 : MonoBehaviour
         textDesc.OnChangedId();
         
     }
-    //public void Show(string id)
-    //{
-    //    var item = DataTableManager.ItemTable.Get(id);
-    //    textName.id = item.Name;
-    //    textDesc.id = item.Desc;
-        
-    //}
 }
