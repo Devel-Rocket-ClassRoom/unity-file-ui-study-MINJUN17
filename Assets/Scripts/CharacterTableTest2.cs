@@ -22,6 +22,7 @@ public class CharacterTableTest2 : MonoBehaviour
 
     public void SetEmpty()
     {
+        currentData = null;
         icon.sprite = null;
         textName.id = string.Empty;
         textDesc.text = string.Empty;
@@ -35,9 +36,9 @@ public class CharacterTableTest2 : MonoBehaviour
         }
     }
 
-    public void SetItemData(string itemId)
+    public void SetItemData(string characterId)
     {
-        CharacterData data = DataTableManager.CharacterTable.Get(itemId);
+        CharacterData data = DataTableManager.CharacterTable.Get(characterId);
         SetItemData(data);
     }
 
