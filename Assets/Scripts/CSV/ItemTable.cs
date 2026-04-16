@@ -20,7 +20,7 @@ public class ItemData
 }
 public class ItemTable : DataTable
 {
-    private readonly Dictionary<string, ItemData> table = new Dictionary<string, ItemData>();
+    public Dictionary<string, ItemData> table = new Dictionary<string, ItemData>();
     public override void Load(string fileName)
     {
         table.Clear();
@@ -50,4 +50,6 @@ public class ItemTable : DataTable
         }
         return table[id];
     }
+
+    
 }
