@@ -20,3 +20,11 @@ Character2Desc,I am a Mage
 Character3Desc,I am an Archer
 Character4Desc,I am a Rogue
 Stat,Attack: {0}\nDefense: {1}
+NAME,Name
+DESC,Description
+TYPE,Type
+VALUE,Value
+COST,Cost
+WEAPON,Weapon
+EQUIP,Equipment
+CONSUMABLE,Consumable

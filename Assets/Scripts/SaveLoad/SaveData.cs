@@ -48,10 +48,33 @@ public class SaveDataV3 : SaveData
 {
     public string Name { get; set; } = string.Empty;
     public int Gold { get; set; } = 0;
-    public List<string> items {  get; set; } = new List<string>();
+    public List<string> items { get; set; } = new List<string>();
     public SaveDataV3()
     {
         Version = 3;
+    }
+    public override SaveData VersionUp()
+    {
+        SaveDataV4 data = new SaveDataV4();
+        //data.Name = Name;
+        //data.Gold = Gold;
+        foreach (string id in items)
+        {
+            SaveItemData itemData = new SaveItemData();
+            itemData.ItemData = DataTableManager.ItemTable.Get(id);
+            data.ItemList.Add(itemData);
+        }
+        return data;
+    }
+
+}
+[System.Serializable]
+public class SaveDataV4 : SaveDataV2
+{
+    public List<SaveItemData> ItemList = new List<SaveItemData>();
+    public SaveDataV4()
+    {
+        Version = 4;
     }
     public override SaveData VersionUp()
     {

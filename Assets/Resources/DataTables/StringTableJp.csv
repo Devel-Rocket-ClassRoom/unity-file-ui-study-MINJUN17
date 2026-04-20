@@ -20,3 +20,11 @@ Character2Desc,私はメイジ
 Character3Desc,私はアーチャー
 Character4Desc,私はローグ
 Stat,アタック: {0}\nディフェンス: {1}
+NAME,ネーム
+DESC,セツメイ
+TYPE,タイプ
+VALUE,バリュー
+COST,コスト
+WEAPON,ブキ
+EQUIP,ソウビ
+CONSUMABLE,ショウモウヒン

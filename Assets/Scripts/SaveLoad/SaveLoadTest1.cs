@@ -20,9 +20,9 @@ public class SaveLoadTest1 : MonoBehaviour
             {
                 Debug.Log(SaveLoadManager.Data.Name);
                 Debug.Log(SaveLoadManager.Data.Gold);
-                foreach (var item in SaveLoadManager.Data.items)
+                foreach (var item in SaveLoadManager.Data.ItemList)
                 {
-                    Debug.Log(item);
+                    Debug.Log($"{item.ItemData.Name} { item.ItemData}");
                 }
             }
             else
@@ -33,8 +33,10 @@ public class SaveLoadTest1 : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Alpha3))
         {
             int index = Random.Range(0, DataTableManager.ItemTable.table.Count);
-            string randomItem = DataTableManager.ItemTable.table.Keys.ToList()[index];
-            SaveLoadManager.Data.items.Add(randomItem);
+            var randomItem = DataTableManager.ItemTable.table.Values.ToList()[index];
+            var saveItem = new SaveItemData();
+            saveItem.ItemData = randomItem;
+            SaveLoadManager.Data.ItemList.Add(saveItem);
         }
     }
 }

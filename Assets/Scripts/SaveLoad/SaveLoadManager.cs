@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using Unity.VisualScripting;
 using UnityEngine;
-using SaveDataVC = SaveDataV3;
+using SaveDataVC = SaveDataV4;
 
 
 public static class SaveLoadManager
@@ -14,7 +14,7 @@ public static class SaveLoadManager
         Encrypted // (.dat)
     }
     public static SaveMode Mode { get; set; } = SaveMode.Encrypted;
-    public static int SaveDataVersion { get; } = 3;
+    public static int SaveDataVersion { get; } = 4;
 
     private static readonly string SaveDirectory = $"{Application.persistentDataPath}/Save";
 

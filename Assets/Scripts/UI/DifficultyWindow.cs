@@ -21,7 +21,6 @@ public class DifficultyWindow : GenericWindow
         cancelButton.onClick.AddListener(OnClickCancel);
         applyButton.onClick.AddListener(OnClickApply);
     }
-
     public override void Open()
     {
         if (folderPath == null)
@@ -29,7 +28,6 @@ public class DifficultyWindow : GenericWindow
             folderPath = Path.Combine(Application.persistentDataPath, "SaveDifficulty");
             filePath = Path.Combine(folderPath, "Difficulty.txt");
         }
-
         if (File.Exists(filePath))
         {
             selected = int.Parse(File.ReadAllText(filePath));
@@ -41,12 +39,10 @@ public class DifficultyWindow : GenericWindow
         base.Open();
         toggles[selected].isOn = true;
     }
-
     public override void Close()
     {
         base.Close();
     }
-
     public void OnEasy(bool active)
     {
         if (active)
@@ -55,7 +51,6 @@ public class DifficultyWindow : GenericWindow
             selected = 0;
         }
     }
-
     public void OnNormal(bool active)
     {
         if (active)
@@ -73,12 +68,10 @@ public class DifficultyWindow : GenericWindow
             selected = 2;
         }
     }
-
     public void OnClickCancel()
     {
         windowManager.Open(0);
     }
-
     public void OnClickApply()
     {
         if (!Directory.Exists(folderPath))

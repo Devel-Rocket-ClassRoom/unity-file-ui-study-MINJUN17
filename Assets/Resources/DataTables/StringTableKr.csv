@@ -20,3 +20,11 @@ Character2Desc,나는 마법사
 Character3Desc,나는 궁수
 Character4Desc,나는 도적
 Stat,공격력: {0}\n방어력: {1}
+NAME,이름
+DESC,설명
+TYPE,타입
+VALUE,밸류
+COST,코스트
+WEAPON,무기
+EQUIP,장비
+CONSUMABLE,소모품
