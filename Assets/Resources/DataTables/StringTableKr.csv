@@ -28,3 +28,18 @@ COST,코스트
 WEAPON,무기
 EQUIP,장비
 CONSUMABLE,소모품
+Sort_TimeAsc,날짜(오름차순)
+Sort_TimeDesc,날짜(내림차순)
+Sort_NameAsc,이름(오름차순)
+Sort_NameDesc,이름(내림차순)
+Filter_None,없음
+Filter_Weapon,무기
+Filter_Equip,장비
+Filter_Consumable,소모품
+Sort_CostAsc,가격(오름차순)
+Sort_CostDesc,가격(내림차순)
+Filter_NonConsumable,비소모품
+Btn_Load,불러오기
+Btn_Save,저장
+Btn_CreateItem,아이템 생성
+Btn_RemoveItem,아이템 삭제

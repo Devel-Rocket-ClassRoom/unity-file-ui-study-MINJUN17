@@ -9,6 +9,7 @@ public class CharacterData
 {
     public string Id { get; set; }
     public string Name { get; set; }
+    public string Type { get; set; }
     public string Desc { get; set; }
     public int Attack { get; set; }
     public int Defense {  get; set; }
@@ -29,6 +30,7 @@ public class CharacterData
 public class CharacterTable : DataTable
 {
     private readonly Dictionary<string, CharacterData> table = new Dictionary<string, CharacterData>();
+    private List<string> keyList;
     public override void Load(string fileName)
     {
         table.Clear();
@@ -57,5 +59,9 @@ public class CharacterTable : DataTable
             return null;
         }
         return table[id];
+    }
+    public CharacterData GetRandom()
+    {
+        return Get(keyList[Random.Range(0, keyList.Count)]);
     }
 }

@@ -460,6 +460,7 @@ GameObject:
   - component: {fileID: 6718088801372774120}
   - component: {fileID: 8191435504249568821}
   - component: {fileID: 7061049236216581591}
+  - component: {fileID: 4159739858236032676}
   m_Layer: 5
   m_Name: ItemInfo
   m_TagString: Untagged
@@ -556,6 +557,24 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &4159739858236032676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5877832444532978832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 372e323cd22d6834dafb3df9c41cd482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UiItemInfo
+  imageIcon: {fileID: 3914584776708904714}
+  textName: {fileID: 2901969066275646052}
+  textDesc: {fileID: 4105210315965384725}
+  textType: {fileID: 2471251406627802513}
+  textValue: {fileID: 1732830266916781300}
+  textCost: {fileID: 2091659577639919287}
 --- !u!1 &6747878640311540095
 GameObject:
   m_ObjectHideFlags: 0

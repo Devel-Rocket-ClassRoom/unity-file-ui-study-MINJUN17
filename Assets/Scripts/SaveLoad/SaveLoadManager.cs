@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using Unity.VisualScripting;
 using UnityEngine;
-using SaveDataVC = SaveDataV4;
+using SaveDataVC = SaveDataV5;
 
 
 public static class SaveLoadManager
@@ -14,7 +14,7 @@ public static class SaveLoadManager
         Encrypted // (.dat)
     }
     public static SaveMode Mode { get; set; } = SaveMode.Encrypted;
-    public static int SaveDataVersion { get; } = 4;
+    public static int SaveDataVersion { get; } = 5;
 
     private static readonly string SaveDirectory = $"{Application.persistentDataPath}/Save";
 
@@ -26,6 +26,14 @@ public static class SaveLoadManager
         "Save3",
     };
     public static SaveDataVC Data { get; set; } = new SaveDataVC();
+
+    static SaveLoadManager()
+    {
+        if (!Load())
+        {
+            Debug.LogError("세이브파일 로드 실패");
+        }
+    }
 
     private static string GetSaveFilePath(int slot, SaveMode mode)
     {
@@ -42,7 +50,7 @@ public static class SaveLoadManager
         Formatting = Formatting.Indented,
         TypeNameHandling = TypeNameHandling.All,
     };
-    public static bool Save(int slot)
+    public static bool Save(int slot = 0)
     {
         return Save(slot, Mode);
     }
@@ -78,7 +86,7 @@ public static class SaveLoadManager
             return false;
         }
     }
-    public static bool Load(int slot)
+    public static bool Load(int slot = 0)
     {
         return Load(slot, Mode);
     }
@@ -91,7 +99,7 @@ public static class SaveLoadManager
         string path = GetSaveFilePath(slot, mode);
         if (!File.Exists(path))
         {
-            return false;
+            return Save();
         }
         try
         {

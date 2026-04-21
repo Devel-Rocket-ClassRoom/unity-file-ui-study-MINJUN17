@@ -78,6 +78,27 @@ public class SaveDataV4 : SaveDataV2
     }
     public override SaveData VersionUp()
     {
+        SaveDataV5 saveData = new SaveDataV5();
+        saveData.Name = Name;
+        saveData.Gold = Gold;
+        saveData.ItemList = ItemList;
+        return saveData;
+    }
+}
+[System.Serializable]
+public class SaveDataV5 : SaveDataV4
+{
+    public UiInvenSlotList.SortingOptions Sorting { get; set; } = UiInvenSlotList.SortingOptions.CreationTimeDescending;
+    public UiInvenSlotList.FilteringOptions Filtering { get; set; } = UiInvenSlotList.FilteringOptions.None;
+    public List<SaveCharacterData> CharacterList { get; set; } = new List<SaveCharacterData>();
+    public UiCharacterSlotList.SortingOptions CharacterSorting { get; set; } = UiCharacterSlotList.SortingOptions.CreationTimeAscending;
+    public UiCharacterSlotList.FilteringOptions CharacterFiltering { get; set; } = UiCharacterSlotList.FilteringOptions.None;
+    public SaveDataV5()
+    {
+        Version = 5;
+    }
+    public override SaveData VersionUp()
+    {
         throw new System.NotImplementedException();
     }
 }

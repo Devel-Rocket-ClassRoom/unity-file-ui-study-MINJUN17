@@ -28,3 +28,18 @@ COST,Cost
 WEAPON,Weapon
 EQUIP,Equipment
 CONSUMABLE,Consumable
+Sort_TimeAsc,Date(Ascending)
+Sort_TimeDesc,Date(Descending)
+Sort_NameAsc,Name(Ascending)
+Sort_NameDesc,Name(Descending)
+Filter_None,None
+Filter_Weapon,Weapon
+Filter_Equip,Equipment
+Filter_Consumable,Consumable
+Sort_CostAsc,Cost (Ascending)
+Sort_CostDesc,Cost (Descending)
+Filter_NonConsumable,Non-Consumable
+Btn_Load,Load
+Btn_Save,Save
+Btn_CreateItem,Create Item
+Btn_RemoveItem,Remove Item
