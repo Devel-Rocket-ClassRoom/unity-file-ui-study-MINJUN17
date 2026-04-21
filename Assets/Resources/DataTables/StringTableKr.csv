@@ -43,3 +43,22 @@ Btn_Load,불러오기
 Btn_Save,저장
 Btn_CreateItem,아이템 생성
 Btn_RemoveItem,아이템 삭제
+ATTACK,공격력
+DEFENSE,방어력
+Sort_Character_TimeAsc,날짜(오름차순)
+Sort_Character_TimeDesc,날짜(내림차순)
+Sort_Character_AttackAsc,공격력(오름차순)
+Sort_Character_AttackDesc,공격력(내림차순)
+Sort_Character_DefenseAsc,방어력(오름차순)
+Sort_Character_DefenseDesc,방어력(내림차순)
+Filter_Character_None,없음
+Filter_Character_Warrior,전사
+Filter_Character_Mage,마법사
+Filter_Character_Archer,궁수
+Filter_Character_Rouge,도적
+Btn_LoadCharacter,불러오기
+Btn_SaveCharacter,저장
+Btn_CreateCharacter,캐릭터생성
+Btn_RemoveCharacter,캐릭터삭제
+Btn_Equip,장착
+Btn_Unequip,해제

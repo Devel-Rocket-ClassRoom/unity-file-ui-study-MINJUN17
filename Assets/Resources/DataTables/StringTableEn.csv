@@ -43,3 +43,22 @@ Btn_Load,Load
 Btn_Save,Save
 Btn_CreateItem,Create Item
 Btn_RemoveItem,Remove Item
+ATTACK,Attack
+DEFENSE,Defense
+Sort_Character_TimeAsc,Date (Ascending)
+Sort_Character_TimeDesc,Date (Descending)
+Sort_Character_AttackAsc,Attack (Ascending)
+Sort_Character_AttackDesc,Attack (Descending)
+Sort_Character_DefenseAsc,Defense (Ascending)
+Sort_Character_DefenseDesc,Defense (Descending)
+Filter_Character_None,None
+Filter_Character_Warrior,Warrior
+Filter_Character_Mage,Mage
+Filter_Character_Archer,Archer
+Filter_Character_Rouge,Rogue
+Btn_LoadCharacter,Load
+Btn_SaveCharacter,Save
+Btn_CreateCharacter,Create Character
+Btn_RemoveCharacter,Remove Character
+Btn_Equip,Equip
+Btn_Unequip,Unequip

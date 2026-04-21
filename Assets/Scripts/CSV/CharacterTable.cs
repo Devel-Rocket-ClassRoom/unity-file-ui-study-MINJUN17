@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 // 1. CSV 파일 (ID / 이름 / 설명 / 공격력... / 초상화 or 아이콘 ...)
@@ -9,7 +10,6 @@ public class CharacterData
 {
     public string Id { get; set; }
     public string Name { get; set; }
-    public string Type { get; set; }
     public string Desc { get; set; }
     public int Attack { get; set; }
     public int Defense {  get; set; }
@@ -50,6 +50,7 @@ public class CharacterTable : DataTable
                 Debug.Log("캐릭터 아이디 중복");
             }
         }
+        keyList = table.Keys.ToList();
     }
     public CharacterData Get(string id)
     {

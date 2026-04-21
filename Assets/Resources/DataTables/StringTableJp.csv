@@ -3,10 +3,10 @@
 HELLO,やあ
 BYE,じゃあな
 YOU DIE,あなたは死ぬ
-Item1Name,剣
-Item2Name,盾
-Item3Name,弓
-Item4Name,ポーション
+Item1Name,ケン
+Item2Name,タテ
+Item3Name,ユミ
+Item4Name,クスリ
 Item1Desc,これは剣だ。
 Item2Desc,これは盾だ。
 Item3Desc,これは弓だ。
@@ -43,3 +43,22 @@ Btn_Load,ヨミコミ
 Btn_Save,ホゾン
 Btn_CreateItem,アイテムセイセイ
 Btn_RemoveItem,アイテムサクジョ
+ATTACK,コウゲキリョク
+DEFENSE,ボウギョリョク
+Sort_Character_TimeAsc,ニチヅケ（ショウジュン）
+Sort_Character_TimeDesc,ニチヅケ（コウジュン）
+Sort_Character_AttackAsc,コウゲキリョク（ショウジュン）
+Sort_Character_AttackDesc,コウゲキリョク（コウジュン）
+Sort_Character_DefenseAsc,ボウギョリョク（ショウジュン）
+Sort_Character_DefenseDesc,ボウギョリョク（コウジュン）
+Filter_Character_None,ナシ
+Filter_Character_Warrior,センシ
+Filter_Character_Mage,マホウツカイ
+Filter_Character_Archer,キュウシュ
+Filter_Character_Rouge,トウゾクv
+Btn_LoadCharacter,ヨミコミ
+Btn_SaveCharacter,ホゾン
+Btn_CreateCharacter,キャラクターセイセイ
+Btn_RemoveCharacter,キャラクターサクジョ
+Btn_Equip,ソウビ
+Btn_Unequip,カイジョ

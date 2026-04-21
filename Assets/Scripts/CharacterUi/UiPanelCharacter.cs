@@ -6,12 +6,17 @@ public class UiPanelCharacter : MonoBehaviour
     public TMP_Dropdown sorting;
     public TMP_Dropdown filtering;
     public UiCharacterSlotList uiCharacterSlotList;
+    public UiCharacterInfo uiCharacterInfo;
+
     private readonly string[] sortingIds = { "Sort_Character_TimeAsc", "Sort_Character_TimeDesc", "Sort_Character_AttackAsc", "Sort_Character_AttackDesc", "Sort_Character_DefenseAsc", "Sort_Character_DefenseDesc" };
     private readonly string[] filteringIds = { "Filter_Character_None", "Filter_Character_Warrior", "Filter_Character_Mage", "Filter_Character_Archer", "Filter_Character_Rouge" };
+
 
     private void Awake()
     {
         uiCharacterSlotList.SetSaveItemDataList(SaveLoadManager.Data.CharacterList);
+        uiCharacterSlotList.onSelectSlot.AddListener(uiCharacterInfo.SetSaveCharacterData);
+        uiCharacterSlotList.onUpdateSlots.AddListener(uiCharacterInfo.SetEmpty);
     }
     private void OnEnable()
     {

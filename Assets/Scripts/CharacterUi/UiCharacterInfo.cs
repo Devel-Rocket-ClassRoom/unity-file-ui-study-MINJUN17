@@ -20,6 +20,7 @@ public class UiCharacterInfo : MonoBehaviour
 
     public UiInvenSlotList itemSelectList;
     private bool isSelectingWeapon = false;
+    private bool isSelecting = false;
 
     private SaveCharacterData currentData;
 
@@ -29,12 +30,12 @@ public class UiCharacterInfo : MonoBehaviour
         weaponUnequipButton.onClick.AddListener(OnClickWeaponUnequip);
         EquipEquipButton.onClick.AddListener(OnCLickEquipEquip);
         EquipUnequipButton.onClick.AddListener(OnClickEquipUnequip);
-
-        //itemSelectList.onSelectSlot.AddListener(Onsel)
+        itemSelectList.onSelectSlot.AddListener(OnSelectItem);
     }
     private void OnEnable()
     {
         Variables.OnLanguageChanged += Refresh;
+        itemSelectList.SetSaveItemDataList(SaveLoadManager.Data.ItemList);
     }
     private void OnDisable()
     {
@@ -65,61 +66,47 @@ public class UiCharacterInfo : MonoBehaviour
         EquipIcon.sprite = currentData.EquipItem?.ItemData.SpriteIcon;
         textName.text = string.Format(ForMatCommon, DataTableManager.StringTable.Get("NAME"), data.StringName);
         textDesc.text = string.Format(ForMatCommon, DataTableManager.StringTable.Get("DESC"), data.StringDesc);
-        textAttack.text = string.Format(ForMatCommon, DataTableManager.StringTable.Get("ATTACK"), data.Attack);
-        textDefense.text = string.Format(ForMatCommon, DataTableManager.StringTable.Get("DEFENSE"), data.Defense);
+        textAttack.text = string.Format(ForMatCommon, DataTableManager.StringTable.Get("ATTACK"), saveCharacterData.TotalAttack);
+        textDefense.text = string.Format(ForMatCommon, DataTableManager.StringTable.Get("DEFENSE"), saveCharacterData.TotalDefense);
     }
     private void OnSelectItem(SaveItemData item)
     {
-        if (currentData == null)
-        {
-            return;
-        }
+        if (currentData == null || !isSelecting) return;
+
         if (isSelectingWeapon)
-        {
             currentData.WeaponItem = item;
-        }
         else
-        {
             currentData.EquipItem = item;
-        }
+
+        isSelecting = false;
         SetSaveCharacterData(currentData);
     }
 
     private void OnClickWeaponEquip()
     {
-        if(currentData == null)
-        {
-            return;
-        }
+        if (currentData == null) return;
+        isSelecting = true;
         isSelectingWeapon = true;
         itemSelectList.Filtering = UiInvenSlotList.FilteringOptions.Weapon;
     }
     private void OnClickWeaponUnequip()
     {
-        if(currentData == null)
-        {
-            return;
-        }
+        if (currentData == null) return;
         currentData.WeaponItem = null;
         SetSaveCharacterData(currentData);
     }
 
     private void OnCLickEquipEquip()
     {
-        if(currentData == null)
-        {
-            return;
-        }
+        if (currentData == null) return;
+        isSelecting = true;
         isSelectingWeapon = false;
         itemSelectList.Filtering = UiInvenSlotList.FilteringOptions.Equip;
     }
 
     private void OnClickEquipUnequip()
     {
-        if(currentData == null)
-        {
-            return;
-        }
+        if (currentData == null) return;
         currentData.EquipItem = null;
         SetSaveCharacterData(currentData);
     }
