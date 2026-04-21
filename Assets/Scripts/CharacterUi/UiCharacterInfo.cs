@@ -71,13 +71,18 @@ public class UiCharacterInfo : MonoBehaviour
     }
     private void OnSelectItem(SaveItemData item)
     {
-        if (currentData == null || !isSelecting) return;
-
+        if (currentData == null || !isSelecting)
+        {
+            return;
+        }
         if (isSelectingWeapon)
+        {
             currentData.WeaponItem = item;
+        }
         else
+        {
             currentData.EquipItem = item;
-
+        }
         isSelecting = false;
         SetSaveCharacterData(currentData);
     }
