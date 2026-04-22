@@ -143,12 +143,12 @@ public class UiCharacterSlotList : MonoBehaviour
         UpdateSlots();
     }
 
-    public void AddRandomItem()
+    public void AddRandomCharacter()
     {
         saveCharacterDataList.Add(SaveCharacterData.GetRandomCharacter());
         UpdateSlots();
     }
-    public void RemoveItem()
+    public void RemoveCharacter()
     {
         if (seletedSlotIndex == -1)
         {

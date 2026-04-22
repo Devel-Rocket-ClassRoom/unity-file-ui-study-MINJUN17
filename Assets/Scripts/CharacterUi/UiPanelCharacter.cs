@@ -66,10 +66,10 @@ public class UiPanelCharacter : MonoBehaviour
     }
     public void OnCreateCharacter()
     {
-        uiCharacterSlotList.AddRandomItem();
+        uiCharacterSlotList.AddRandomCharacter();
     }
     public void OnRemoveCharacter()
     {
-        uiCharacterSlotList.RemoveItem();
+        uiCharacterSlotList.RemoveCharacter();
     }
 }
