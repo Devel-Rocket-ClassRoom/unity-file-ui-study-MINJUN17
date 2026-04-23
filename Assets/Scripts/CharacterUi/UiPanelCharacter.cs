@@ -14,7 +14,7 @@ public class UiPanelCharacter : MonoBehaviour
 
     private void Awake()
     {
-        uiCharacterSlotList.SetSaveItemDataList(SaveLoadManager.Data.CharacterList);
+        uiCharacterSlotList.SetSaveCharacterDataList(SaveLoadManager.Data.CharacterList);
         uiCharacterSlotList.onSelectSlot.AddListener(uiCharacterInfo.SetSaveCharacterData);
         uiCharacterSlotList.onUpdateSlots.AddListener(uiCharacterInfo.SetEmpty);
     }
@@ -56,13 +56,13 @@ public class UiPanelCharacter : MonoBehaviour
     }
     public void OnSave()
     {
-        SaveLoadManager.Data.CharacterList = uiCharacterSlotList.GetSaveItemDataList();
+        SaveLoadManager.Data.CharacterList = uiCharacterSlotList.GetSaveCharacterDataList();
         SaveLoadManager.Save();
     }
     public void OnLoad()
     {
         SaveLoadManager.Load();
-        uiCharacterSlotList.SetSaveItemDataList(SaveLoadManager.Data.CharacterList);
+        uiCharacterSlotList.SetSaveCharacterDataList(SaveLoadManager.Data.CharacterList);
     }
     public void OnCreateCharacter()
     {

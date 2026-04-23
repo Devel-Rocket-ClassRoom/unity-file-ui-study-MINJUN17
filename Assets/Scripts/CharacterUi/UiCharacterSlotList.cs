@@ -129,7 +129,7 @@ public class UiCharacterSlotList : MonoBehaviour
     {
         onSelectSlot.AddListener(OnSelectSlot);
     }
-    public List<SaveCharacterData> GetSaveItemDataList()
+    public List<SaveCharacterData> GetSaveCharacterDataList()
     {
         return saveCharacterDataList;
     }
@@ -137,7 +137,7 @@ public class UiCharacterSlotList : MonoBehaviour
     {
         saveCharacterDataList = null;
     }
-    public void SetSaveItemDataList(List<SaveCharacterData> source)
+    public void SetSaveCharacterDataList(List<SaveCharacterData> source)
     {
         saveCharacterDataList = source.ToList();
         UpdateSlots();
